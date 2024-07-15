@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from './Header '
+import Footer from './Footer'
 
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className='container mx-auto bg-slate-500 text-slate-100'>
         <Header></Header>
         {children}
+        <Footer />
         </body>
     </html>
   )
