@@ -20,9 +20,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='container mx-auto bg-slate-500 text-slate-100'>
-        <Header></Header>
-        <Suspense fallback={<Loading />}>{children}</Suspense>
+        <div className='flex flex-col min-h-screen'>
+          <Header></Header>
+          <main className='flex-grow'>
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </main>
         <Footer />
+        </div>
         </body>
     </html>
   )
