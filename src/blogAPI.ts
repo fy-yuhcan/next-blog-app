@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import { Article } from "./types";
 
 export const getAllArticles = async (): Promise<Article[]>=>{
@@ -5,6 +6,7 @@ export const getAllArticles = async (): Promise<Article[]>=>{
 
     if(!res.ok){
     throw new Error("エラーが出ています")}
+    await new Promise((resolve)=>setTimeout(resolve,1500))
     const articles = await res.json()
     return articles;
 }

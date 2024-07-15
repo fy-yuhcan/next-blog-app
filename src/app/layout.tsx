@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from './Header '
 import Footer from './Footer'
+import { Suspense } from 'react'
+import Loading from './loading'
 
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className='container mx-auto bg-slate-500 text-slate-100'>
         <Header></Header>
-        {children}
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
         </body>
     </html>
