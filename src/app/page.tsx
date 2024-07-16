@@ -3,7 +3,11 @@ import ArticleList from './components/ArticleList'
 import { getAllArticles } from '@/blogAPI'
 
 export default async function Home() {
-  const articles = await getAllArticles();
+  //const articles = await getAllArticles();
+  const API_URL=process.env.NEXT_PUBLIC_API_URL
+  const res = await fetch(`${API_URL}/api/`,{cache: "no-store"})
+  const articles =await res.json()
+
   console.log(supabase)
   return (
   <div className='md:flex'>

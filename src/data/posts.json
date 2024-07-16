@@ -1,12 +1,6 @@
 {
   "posts": [
     {
-      "id": "json-server",
-      "title": "jsonを学ぶ",
-      "content": "学んでいます",
-      "created_at": "2024/7/16"
-    },
-    {
       "id": "react",
       "title": "rectを学ぶ",
       "content": "学んでいます",
