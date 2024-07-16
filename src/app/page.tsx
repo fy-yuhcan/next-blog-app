@@ -5,10 +5,9 @@ import { getAllArticles } from '@/blogAPI'
 export default async function Home() {
   //const articles = await getAllArticles();
   const API_URL=process.env.NEXT_PUBLIC_API_URL
-  const res = await fetch(`${API_URL}/api/`,{cache: "no-store"})
+  const res = await fetch(`${API_URL}/api/blog`,{cache: "no-store"})
   const articles =await res.json()
 
-  console.log(supabase)
   return (
   <div className='md:flex'>
     <section className='w-full md:w-2/3 flex flex-col items-center px-3' >
