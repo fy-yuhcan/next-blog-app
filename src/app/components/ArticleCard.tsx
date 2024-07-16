@@ -17,7 +17,7 @@ const ArticleCard = ({article}:ArticleCardProps) => {
             <div className='bg-white flex flex-col justify-start p-6'>
                 <Link href={`articles/${article.id}`} className='text-blue-700 pd-4 font-bold'>Techology</Link>
                 <Link href={`articles/${article.id}`} className='text-slate-900 text-3xl hover:text-gray-700'>{article.title}</Link>
-                <p className='text-sm bd-3 text-slate-900'>by next,{article.createdAt}</p>
+                <p className='text-sm bd-3 text-slate-900'>by next,{new Date(article.createdAt).toLocaleDateString()}</p>
                 <Link href={`articles/${article.id}`} className='text-slate-900 pd-6'>
                     {article.content.length > 70 ? article.content.substring(0,70) : article.content}
                 </Link>
